@@ -1,0 +1,17 @@
+keycloak:
+  persistence:
+    deployPostgres: true
+    dbVendor: postgres
+  service:
+    type: NodePort
+  username: keycloak
+  password: keycloak
+
+postgresql:
+  persistence:
+    enabled: true
+    existingClaim: postgres-pv-claim
+  volumePermissions:
+    enabled: true
+  postgresqlUsername: postgres
+  postgresqlPassword: postgres
